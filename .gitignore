@@ -1,0 +1,19 @@
+# Go
+/bin/
+netinsight
+*.test
+*.out
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+
+# Built frontend (regenerated at build time). Keep a placeholder so go:embed works.
+/web/dist/*
+!/web/dist/index.html
+
+# Runtime data
+*.db
+*.db-wal
+*.db-shm
+/data/

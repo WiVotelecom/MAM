@@ -1,0 +1,9 @@
+.git
+**/node_modules
+frontend/node_modules
+bin
+*.db
+*.db-wal
+*.db-shm
+data
+web/dist/assets
