@@ -5,18 +5,22 @@ import (
 	"errors"
 	"net"
 	"sort"
+	"sync"
 	"testing"
 	"time"
 )
 
 // fakeDialer records dialed addresses and returns a configurable error.
 type fakeDialer struct {
-	fail    map[string]error
-	dialed  []string
+	mu     sync.Mutex
+	fail   map[string]error
+	dialed []string
 }
 
 func (f *fakeDialer) DialContext(_ context.Context, _, address string) (net.Conn, error) {
+	f.mu.Lock()
 	f.dialed = append(f.dialed, address)
+	f.mu.Unlock()
 	if err, ok := f.fail[address]; ok {
 		return nil, err
 	}

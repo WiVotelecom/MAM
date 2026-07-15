@@ -269,7 +269,7 @@ func (s *Server) handleSpeedDownload(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) handleSpeedUpload(w http.ResponseWriter, r *http.Request) {
-	start := s.now()
+	start := time.Now()
 	n, err := io.Copy(io.Discard, io.LimitReader(r.Body, speed.MaxPayloadBytes))
 	if err != nil {
 		writeError(w, http.StatusBadRequest, err.Error())

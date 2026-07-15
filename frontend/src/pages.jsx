@@ -226,7 +226,7 @@ function Metric({ label, value }) {
   return (
     <div className="bg-slate-50 rounded-lg p-4 text-center">
       <div className="text-slate-500 text-sm">{label}</div>
-      <div className="text-3xl font-bold text-brand">{value ? value.toFixed(1) : '—'}</div>
+      <div className="text-3xl font-bold text-brand">{value != null ? value.toFixed(1) : '—'}</div>
       <div className="text-slate-400 text-xs">Mbps</div>
     </div>
   );
