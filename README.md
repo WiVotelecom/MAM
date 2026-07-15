@@ -15,6 +15,20 @@ docker run -d -p 80:8080 netinsight
 Everything works offline. The only optional online lookup is the public IP,
 which fails gracefully (and can be disabled entirely).
 
+## Demo
+
+https://github.com/WiVotelecom/MAM/raw/main/docs/media/netinsight-demo.mp4
+
+A full walkthrough of every page (video: [`docs/media/netinsight-demo.mp4`](docs/media/netinsight-demo.mp4)).
+
+| Info | Network |
+| --- | --- |
+| ![Info page](docs/media/info.png) | ![Network page](docs/media/network.png) |
+| **Connectivity** | **Speed** |
+| ![Connectivity probes](docs/media/connectivity.png) | ![Speed test](docs/media/speed.png) |
+| **Report / QR** | |
+| ![Report and QR](docs/media/report-qr.png) | |
+
 ## Features
 
 | Page | What it shows |
