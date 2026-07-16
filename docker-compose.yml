@@ -1,0 +1,20 @@
+services:
+  netinsight:
+    build:
+      context: .
+      args:
+        VERSION: "0.1.0"
+    image: netinsight:latest
+    container_name: netinsight
+    ports:
+      - "80:8080"
+    volumes:
+      - netinsight-data:/data
+    environment:
+      # Set to an empty string to fully disable the (optional) public-IP lookup
+      # for air-gapped deployments.
+      NETINSIGHT_PUBLIC_IP_URL: "https://api.ipify.org"
+    restart: unless-stopped
+
+volumes:
+  netinsight-data:
