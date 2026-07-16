@@ -8,7 +8,7 @@ HelpDesk / NOC operator gets a complete picture **without installing an agent on
 the client**.
 
 ```bash
-docker run -d -p 80:8080 netinsight
+docker run -d -p 8080:80 ghcr.io/wivotelecom/mam:latest
 # then open http://<host>/
 ```
 
